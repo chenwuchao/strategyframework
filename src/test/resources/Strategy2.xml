@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflows>
+    <workflow name="test">
+        <worker name="test1">
+            <depend>test4</depend>
+        </worker>
+        <worker name="test2">
+        </worker>
+        <worker name="test3">
+            <depend>test1</depend>
+            <depend>test2</depend>
+        </worker>
+        <worker name="test4">
+        </worker>
+    </workflow>
+
+    <strategys>
+        <strategy name="test1">
+            <class>com.chenwuchao.strategyframework.examples.StringStrategyExample</class>
+            <params>kk,_test1</params>
+        </strategy>
+
+        <strategy name="test2">
+            <class>com.chenwuchao.strategyframework.examples.StringStrategyExample</class>
+            <params>kk,_test2</params>
+        </strategy>
+
+        <strategy name="test3">
+            <class>com.chenwuchao.strategyframework.examples.StringStrategyExample</class>
+            <params>kk,_test3</params>
+        </strategy>
+        <strategy name="test4">
+            <class>com.chenwuchao.strategyframework.examples.StringStrategyExample</class>
+            <params>kk,_test4</params>
+        </strategy>
+    </strategys>
+
+</workflows>
